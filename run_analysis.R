@@ -92,5 +92,5 @@ tiddyMean <-
   arrange(tiddyMean, activityLabel, as.numeric(levels(subjectId)[subjectId]))
 
 # Step #6: Output the tiddy data and the mean of the tiddy numeric variables to a file for upload
-write.table(tiddyData, file = "Tiddy_data.csv", sep = ",")
-write.table(tiddyMean, file = "Tiddy_mean.csv", sep = ",")
+write.table(tiddyData, file = "Tiddy_data.txt")
+write.table(tiddyMean, file = "Tiddy_mean.txt")
