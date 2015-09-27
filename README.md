@@ -2,7 +2,7 @@
 Author: Mark Johnson
 
 ## Overview
-This is a guide for ##the Getting and Cleaning Course project## which prepares a tiddy data set for both the test and train wearables datasets.  The target audience for  this project includes the course peer reviewers to aide their evaluation of this submission.
+This is a guide for ## the Getting and Cleaning Course project ## which prepares a tiddy data set for both the test and train wearables datasets.  The target audience for  this project includes the course peer reviewers to aide their evaluation of this submission.
 
 ## Project Output results
 The output from this assignment are two files:
