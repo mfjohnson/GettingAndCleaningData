@@ -47,7 +47,7 @@ rm(X_test)
 tiddyData <- rbind(cbind(subject_Test, Y_test, xTest), cbind(subject_Train, Y_train, xTrain))
 
 # Step #4: Name the activites in the dataset
-tiddyData$Activity <- activity_labels[tiddyData$activityId,]$activityLabel
+tiddyData$activityLabel <- activity_labels[tiddyData$activityId,]$activityLabel
 rm(Y_test)
 rm(xTest)
 rm(subject_Test)
@@ -57,7 +57,8 @@ rm(xTrain)
 
 # Step #5: From the data set in step 4, creates a second, independent tidy data set with the 
 #          average of each variable for each activity and each subject.
-tiddyMean <- ddply(tiddy_Data,.(Activity, subjectId),numcolwise(mean,na.rm = TRUE))
+tiddyMean <- ddply(tiddyData,.(activityLabel, subjectId),numcolwise(mean,na.rm = TRUE))
+tiddyMean <- arrange(tiddyMean, activityLabel, as.numeric(levels(subjectId)[subjectId]))
 
 # Step #6: Output the tiddy data and the mean of the tiddy numeric variables to a file for upload
 write.table(tiddyData, file="Tiddy_data.csv", sep=",")
