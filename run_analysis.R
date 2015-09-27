@@ -12,7 +12,7 @@ features <-
   read.table(
     "features.txt", colClasses = c("numeric","factor"), col.names = c("colId","featureLabel")
   )
-features$featureLabel <- sapply(features$featureLabel, function(x) sub("[[:punct:]][[:punct:]][[:punct:]]","",x))
+features$featureLabel <- sapply(features$featureLabel, function(x) sub("[[:punct:]][[:punct:]][[:punct:]]","_",x))
 features$featureLabel <- sapply(features$featureLabel, function(x) sub("[[:punct:]]","",x))
 featureLabels <- as.vector(features$featureLabel)
 
@@ -80,8 +80,11 @@ rm(tiddyDataFieldNames)
 rm(Y_train)
 
 # Step #4: Appropriately labels the data set with descriptive variable names. 
+origNames <- names(tiddyData)
+origNames <- lapply(names(tiddyData), function(x) {
+  gsub("Acc","Accelleration", x)
+  })
 
-#TODO
 # Step #5: From the data set in step 4, creates a second, independent tidy data set with the
 #          average of each variable for each activity and each subject.
 tiddyMean <-
