@@ -79,11 +79,10 @@ tiddyData <-
 tiddyData$activityLabel <-
   activity_labels[tiddyData$activityId,]$activityLabel
 rm(Y_test)
-rm(xTest)
 rm(subject_Test)
 rm(subject_Train)
 rm(Y_train)
-rm(xTrain)
+
 
 # Step #5: From the data set in step 4, creates a second, independent tidy data set with the
 #          average of each variable for each activity and each subject.
