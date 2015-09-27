@@ -6,8 +6,8 @@ This is a guide for **the Getting and Cleaning Course project** which prepares a
 
 ## Project Output results
 The output from this assignment are two files:
-* tiddy_data: the unsummarized tiddy data file containing only the mean and std measures plus the factor variables
-* tiddy_mean: The summarized mean of all the numeric variables
+* Tiddy_data.csv: the unsummarized tiddy data file containing only the mean and std measures plus the factor variables
+* Tiddy_mean.csv: The summarized mean of all the numeric variables
 
 ## Source Data files
 Some notes about the source data files used in this project are found below:
